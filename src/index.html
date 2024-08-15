@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Cadastro de Produtos</h1>
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" id="produto" class="form-control" placeholder="Digite o nome do produto">
+                    <button id="bnt" class="btn btn-primary">Cadastrar Produto</button>
+                </div>
+            </div>
+        </div>
+        <ul id="lista-produtos" class="list-group">
+            <li class="list-group-item">Arroz</li>
+            <li class="list-group-item">Feijão</li>
+            <li class="list-group-item">Macarrão</li>
+            <li class="list-group-item">Açúcar</li>
+        </ul>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <script>
+        var $lista = document.querySelector('#lista-produtos');
+        var $produto = document.querySelector('#produto');
+        var $botao = document.querySelector('#bnt');
+
+        $botao.addEventListener('click', addProduto);
+
+        function addProduto() {
+            if ($produto.value.trim() === '') return; // Não adicionar itens vazios
+
+            var item = '<li class="list-group-item">' + $produto.value + '</li>';
+            $lista.innerHTML += item;
+            $produto.value = '';
+            $produto.focus();
+        }
+
+        $produto.addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                addProduto();
+            }
+        });
+    </script>
+</body>
+</html>

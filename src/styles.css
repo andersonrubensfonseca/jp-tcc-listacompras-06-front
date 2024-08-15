@@ -1,0 +1,62 @@
+/* styles.css */
+
+/* Reseta alguns estilos padrões do navegador */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estiliza o corpo da página */
+body {
+    background-image: url(./fundo.jfif);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    /* background-color: #552828; */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estiliza o cabeçalho */
+header {
+    background: #333;
+    color: rgb(219, 131, 131);
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: rgb(231, 135, 135);
+    text-decoration: none;
+}
+
+/* Estiliza as seções principais */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Estiliza o rodapé */
+footer {
+    background: #333;
+    color: rgb(231, 173, 173);
+    text-align: center;
+    padding: 10px 0;
+}
