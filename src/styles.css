@@ -60,3 +60,18 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+.form-check-input:checked {
+    background-color: #ede714;
+    border-color: #d5cf1c;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #dbc211;
+    border-color: #f6f90d;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #f6f90d;
+    border-color: #dbc211;
+}
